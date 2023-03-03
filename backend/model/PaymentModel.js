@@ -24,11 +24,7 @@ const Payment = database.define('Payment',{
 });
 
 // .hasMany(Stock,{foreignKey:'product_id'});
-InstallmentPlan.hasOne(Stock,{foreignKey:'product_id'});
-Customer.hasMany(Stock,{foreignKey:'customer_id'});
-
-database.sync().then(()=>{
-    console.log("Payment Table Created");
-});
+InstallmentPlan.hasOne(Payment,{foreignKey:'installment_plan_id'});
+Customer.hasMany(Payment,{foreignKey:'customer_id'});
 
 module.exports = Payment;

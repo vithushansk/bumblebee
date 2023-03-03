@@ -25,9 +25,6 @@ const Product = database.define('Product',{
 Brand.hasMany(Product,{foreignKey:'brand_id'});
 Category.hasMany(Product,{foreignKey:'category_id'});
 
-database.sync().then(()=>{
-    console.log("Product Table Created");
-});
 
 module.exports = Product;
 

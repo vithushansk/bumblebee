@@ -13,9 +13,5 @@ const Stock = database.define('Stock',{
 
 Product.hasMany(Stock,{foreignKey:'product_id'});
 
-database.sync().then(()=>{
-    console.log("Stock Table Created");
-});
-
 module.exports = Stock;
 

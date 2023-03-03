@@ -26,8 +26,4 @@ const User = database.define('User',{
     }
 });
 
-database.sync().then(()=>{
-    console.log("User Table Created");
-});
-
 module.exports = User;

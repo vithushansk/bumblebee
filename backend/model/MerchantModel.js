@@ -38,9 +38,6 @@ const Merchant = database.define('Merchant',{
 
 User.hasOne(Merchant,{foreignKey:'user_id'});
 
-database.sync().then(()=>{
-    console.log("Merchant Table Created");
-});
 
 module.exports = Merchant;
 

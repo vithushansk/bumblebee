@@ -8,6 +8,10 @@ const dbConnection = new Sequelize(process.env.DB_DATABASE,process.env.DB_USERNA
     dialect:"mysql"
 });
 
+dbConnection.sync({alter:true}).then(()=>{
+    console.log("All Models are excuted")
+});
+
 dbConnection.authenticate().then(()=>{
     console.log(`Database Connected!`);
     console.log(`Application Port is : ${process.env.PORT}`);

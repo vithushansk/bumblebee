@@ -16,9 +16,6 @@ const InstallmentPlan = database.define('InstallmentPlan',{
 
 });
 
-database.sync().then(()=>{
-    console.log("Installment Plan Table Created");
-});
 
 module.exports = InstallmentPlan;
 

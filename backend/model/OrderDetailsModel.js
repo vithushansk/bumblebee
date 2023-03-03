@@ -22,12 +22,8 @@ const OrderDetail = database.define('OrderDetail',{
     }
 });
 
-Product.belongsTo(OrderDetail,{foreignKey:'product_id'});
+Product.hasMany(OrderDetail,{foreignKey:'product_id'});
 Order.hasMany(OrderDetail,{foreignKey:'order_id'});
-
-database.sync().then(()=>{
-    console.log("Order Detail Table Created");
-});
 
 module.exports = OrderDetail;
 

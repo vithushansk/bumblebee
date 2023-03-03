@@ -15,9 +15,5 @@ const Category = database.define('Category',{
     },
 });
 
-database.sync().then(()=>{
-    console.log("Category Table Created");
-});
-
 module.exports = Category;
 

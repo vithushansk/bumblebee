@@ -16,9 +16,5 @@ const Brand = database.define('Brand',{
 
 });
 
-database.sync().then(()=>{
-    console.log("Brand Table Created");
-});
-
 module.exports = Brand;
 

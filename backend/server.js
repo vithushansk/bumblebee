@@ -1,9 +1,7 @@
 const app = require('./app');
-const dbConnection = require('./config/Database');
-const  User  = require('../backend/model/UserModel');
-const Customer = require('./model/CustomerModel');
+// const dbConnection = require('./config/Database');
 
 app.listen(5000,()=>{
     console.log("Application Running...!");
-    dbConnection;
+    // dbConnection;
 });

@@ -29,13 +29,14 @@ const Customer = database.define('Customer',{
         type:DataTypes.STRING,
         allowNull:false
     },
+
+    avatar:{
+        type:DataTypes.STRING,
+        allowNull:true
+    }
 });
 
 User.hasOne(Customer,{foreignKey:'user_id'});
-
-database.sync().then(()=>{
-    console.log("Customer Table Created");
-});
 
 module.exports = Customer;
 

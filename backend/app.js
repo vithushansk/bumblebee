@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
+app.use(express.json());
 
-app.set('view engine','pug');
+const user = require('./routes/user');
+app.use(user);
+const customer = require('./routes/customer');
+app.use(customer);
 
-router.get('/', (req,res)=>{
-    res.status(200).render('index');
-});
-
-app.use(router);
 module.exports = app;

@@ -8,6 +8,7 @@ class Customer extends Component{
                 <CustomerNavbar/>
 
                 <div className='m-3 flex flex-col items-center'>
+                    {/* Search bar */}
                     <div className='bg-gray-100 w-3/4 p-3 rounded-full'>
                         <form className='flex gap-2'>
                             <input type="text" placeholder='Search here...' className='w-3/4 p-2 rounded-bl-full rounded-tl-full'/>
@@ -21,10 +22,10 @@ class Customer extends Component{
                     </div>
 
                     {/* Categories Section */}
-
                     <section className='bg-gray-100 w-full mt-5 rounded-lg p-3'>
                         <p className='text-xl font-medium'>Category</p>
                         <hr/>
+                        {/* Row 01 */}
                         <div className='flex justify-around items-center text-zinc-100 mt-5'>
                             <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
                                 <img src='men.svg' className='w-10 h-10'/>
@@ -47,25 +48,49 @@ class Customer extends Component{
                             </a>
                         </div>
 
+                        {/* Row 02 */}
                         <div className='flex justify-around items-center text-zinc-100 mt-5'>
                             <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
-                                <img src='men.svg' className='w-10 h-10'/>
-                                <span>Electrices</span>
+                                <img src='electric.svg' className='w-10 h-10'/>
+                                <span>Electric Tools</span>
                             </a>
 
                             <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
-                                <img src='women.svg' className='w-10 h-10'/>
+                                <img src='electronic.svg' className='w-10 h-10'/>
                                 <span>Electronics</span>
                             </a>
 
                             <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
-                                <img src='home.svg' className='w-10 h-10'/>
-                                <span>Home Appliances</span>
+                                <img src='mobile.svg' className='w-10 h-10'/>
+                                <span>Mobiles</span>
                             </a>
 
                             <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
-                                <img src='travel.svg' className='w-10 h-10'/>
-                                <span>Travel</span>
+                                <img src='watch.svg' className='w-10 h-10'/>
+                                <span>Watches</span>
+                            </a>
+                        </div>
+
+                        {/* Row 03 */}
+                        <div className='flex justify-around items-center text-zinc-100 mt-5'>
+                            <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
+                                <img src='footwear.svg' className='w-10 h-10'/>
+                                <span>Footwear</span>
+                            </a>
+
+                            <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
+                                <img src='automobile.svg' className='w-10 h-10'/>
+                                <span>Automobile</span>
+                            </a>
+
+                            <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
+                                <img src='gaming.svg' className='w-10 h-10'/>
+                                <span>Gaming</span>
+                            </a>
+
+                            <a href='#' className='bg-zinc-800 p-3 w-1/5 rounded-lg flex items-center gap-2'>
+                                <img src='sports.svg' className='w-10 h-10'/>
+                                <span>Sports</span>
                             </a>
                         </div>
 

@@ -22,8 +22,10 @@ class Login extends Component{
                             <form className="w-full flex flex-col gap-1">
                                 <label className="font-medium text-sm">Username</label>
                                 <input type="text" name="username" placeholder="enter your email" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <label className="font-medium text-sm">Password</label>
                                 <input type="password" name="password" placeholder="enter your password" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <button type="submit" className="bg-fuchsia-700 p-2 rounded mt-3">LOGIN</button>
                             </form>
                         </div>

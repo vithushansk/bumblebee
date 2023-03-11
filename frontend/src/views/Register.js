@@ -21,17 +21,23 @@ class Register extends Component{
 
                         <div className="w-3/4 h-3/4 flex items-center">
                             <form className="w-full flex flex-col gap-1">
+                                
                                 <label className="font-medium text-sm">Firstname</label>
                                 <input type="text" name="firstname" placeholder="enter your email" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <label className="font-medium text-sm">Lastname</label>
                                 <input type="text" name="lastname" placeholder="enter your email" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <label className="font-medium text-sm">Date of Birth</label>
                                 <input type="date" name="dob" placeholder="enter your email" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <label className="font-medium text-sm">Username</label>
                                 <input type="text" name="username" placeholder="enter your email" className="border p-2 rounded placeholder:italic"/>
+                                
                                 <label className="font-medium text-sm">Password</label>
                                 <input type="password" name="password" placeholder="enter your password" className="border p-2 rounded placeholder:italic"/>
-                                <button type="submit" className="bg-fuchsia-700 p-2 rounded mt-3">REGISTER</button>
+                                
+                                <button type="submit" className="bg-fuchsia-700 p-2 rounded mt-3 font-medium hover:bg-fuchsia-800">REGISTER</button>
                             </form>
                         </div>
 

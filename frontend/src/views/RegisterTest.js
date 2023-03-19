@@ -1,9 +1,28 @@
-import { Component } from "react";
+import { useState } from "react";
+import axios from 'axios';
 
+export default function NewUser(){
+    const [inputs,setInputs] = useState({
+        username:"",
+        password:"",
+        dateOfBirth:""
+    });
 
-class Register extends Component{
+    const handleInputChange = (event) => {
+        setInputs({...inputs,[event.target.name]:event.target.value})
+    }
+    
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        await axios.post('http://localhost:5000/new/user',inputs)
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }
 
-    render(){
         return(
             <>
             <div className="w-full h-screen bg-fuchsia-400 flex justify-center items-center">
@@ -19,15 +38,15 @@ class Register extends Component{
                             <h1 className="font-medium text-xl text-center">Create Account</h1>
                         </div>
                         <div className="w-3/4 h-3/4 flex items-center">
-                            <form className="w-full flex flex-col gap-1" >
+                            <form className="w-full flex flex-col gap-1" onSubmit={handleSubmit}>
                                 <label className="font-medium text-sm">Username</label>
-                                <input type="text" name="username" className="border p-2 rounded"/>
+                                <input type="text" value={inputs.username} onChange={handleInputChange} name="username" className="border p-2 rounded"/>
                                 
                                 <label className="font-medium text-sm">Password</label>
-                                <input type="password" name="password" className="border p-2 rounded"/>
+                                <input type="password" value={inputs.password} onChange={handleInputChange} name="password" className="border p-2 rounded"/>
                                 
                                 <label className="font-medium text-sm">Date of Birth</label>
-                                <input type="date" name="dateOfBirth" className="border p-2 rounded"/>
+                                <input type="date" value={inputs.dateOfBirth} onChange={handleInputChange} name="dateOfBirth" className="border p-2 rounded"/>
                                 <button type="submit" className="bg-fuchsia-700 p-2 rounded mt-3 font-medium hover:bg-fuchsia-800">REGISTER</button>
                             </form>
                         </div>
@@ -39,6 +58,6 @@ class Register extends Component{
             </div>
             </>
         )
+
     }
-}
-export default Register;
+    

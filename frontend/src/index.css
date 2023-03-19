@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .sideBar-link {
+    @apply bg-zinc-300 text-zinc-800 w-full p-2 rounded hover:bg-zinc-700 hover:text-white font-medium;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

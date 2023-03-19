@@ -21,7 +21,7 @@ exports.addCustomer = (req,res,next) =>{
         address:req.body.address,
         mobile:req.body.mobile,
         avatar:req.body.avatar,
-        userId:req.body.userId,
+        userId:req.body.userId
     };
 
     Customer.create(customer).then(data => {

@@ -3,11 +3,6 @@ const User = db.users;
 
 // Get All user details
 exports.getUsers = (req,res,next) => {
-    // res.status(200).json({
-    //     success:true,
-    //     message:"View all users"
-    // });
-
     User.findAll().then(data =>{
         res.send(data);
     })

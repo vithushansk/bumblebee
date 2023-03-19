@@ -21,7 +21,7 @@ class CustomerProfile extends Component{
 
                     <div className='bg-zinc-800 p-3 rounded-lg flex flex-col items-center w-1/4 shadow-md text-white'>
                         <p className='font-medium'>Last Purchase amount</p>
-                        <p className='font-bold text-4xl'>Rs.15,000</p>
+                        <p className='font-bold text-4xl'>Rs.8,000</p>
                     </div>
                     
                 </div>
